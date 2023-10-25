@@ -123,6 +123,7 @@ namespace Version {
 			case 354:
 			case 355:
 			case 356:
+			case 360:
 				version = v1_35_1_0;
 				break;
 			}
@@ -135,6 +136,9 @@ namespace Version {
 			Pattern minor = Injector::ReadMemory<Pattern>(BytePattern::temp_instance().get_first().address(10), true);
 
 			switch (minor.calVer()) {
+			case 360:
+				version = v1_35_1_0;
+				break;
 			case 322:
 			case 321:
 				version = v1_32_0_1;
